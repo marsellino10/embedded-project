@@ -3,83 +3,10 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Keil\Labware\Lab15_SpaceInvaders\SpaceInvaders.uvproj
-Project File Date:  05/04/2022
+C:\Users\arsan\Desktop\embedded-project-main Dif\embedded project\SpaceInvaders.uvproj
+Project File Date:  05/16/2022
 
 <h2>Output:</h2>
-Build target 'SpaceInvaders'
-compiling SpaceInvaders.c...
-gpio.c(31): warning:  #223-D: function "EnableInterrupts" declared implicitly
-    EnableInterrupts();           // (i) Clears the I bit
-SpaceInvaders.c: 1 warning, 0 errors
-linking...
-.\SpaceInvaders.axf: Error: L6218E: Undefined symbol Enemies (referred from spaceinvaders.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\SpaceInvaders.axf" - 1 Error(s), 1 Warning(s).
-Target not created
 </pre>
 </body>
 </html>
-rning and 1 error messages.
-".\SpaceInvaders.axf" - 1 Error(s), 2 Warning(s).
-Target not created
-rmation, 0 warning and 1 error messages.
-".\SpaceInvaders.axf" - 1 Error(s), 3 Warning(s).
-Target not created
- GPIO_PORTF_PCTL_R &= ~0x000F0000; // configure PF4 as GPIO
-SpaceInvaders.c(71): error:  #20: identifier "GPIO_PORTF_AMSEL_R" is undefined
-    GPIO_PORTF_AMSEL_R = 0;       //     disable analog functionality on PF4
-SpaceInvaders.c(72): error:  #20: identifier "GPIO_PORTF_PUR_R" is undefined
-    GPIO_PORTF_PUR_R |= 0x10;     //     enable weak pull-up on PF4
-SpaceInvaders.c(73): error:  #20: identifier "GPIO_PORTF_IS_R" is undefined
-    GPIO_PORTF_IS_R &= ~0x10;     // (d) PF4 is edge-sensitive
-SpaceInvaders.c(74): error:  #20: identifier "GPIO_PORTF_IBE_R" is undefined
-    GPIO_PORTF_IBE_R &= ~0x10;    //     PF4 is not both edges
-SpaceInvaders.c(75): error:  #20: identifier "GPIO_PORTF_IEV_R" is undefined
-    GPIO_PORTF_IEV_R &= ~0x10;    //     PF4 falling edge event
-SpaceInvaders.c(76): error:  #20: identifier "GPIO_PORTF_ICR_R" is undefined
-    GPIO_PORTF_ICR_R = 0x10;      // (e) clear flag4
-SpaceInvaders.c(77): error:  #20: identifier "GPIO_PORTF_IM_R" is undefined
-    GPIO_PORTF_IM_R |= 0x10;      // (f) arm interrupt on PF4
-SpaceInvaders.c(91): error:  #20: identifier "NVIC_PRI7_R" is undefined
-    NVIC_PRI7_R = (NVIC_PRI7_R&0xFF00FFFF)|0x00A00000; // (g) priority 5
-SpaceInvaders.c(92): error:  #20: identifier "NVIC_EN0_R" is undefined
-    NVIC_EN0_R = 0x40000000;      // (h) enable interrupt 30 in NVIC
-SpaceInvaders.c(99): error:  #20: identifier "SYSCTL_RCGC2_R" is undefined
-    SYSCTL_RCGC2_R |= 0x00000020;     // 1) F clock
-SpaceInvaders.c(101): error:  #20: identifier "GPIO_PORTF_LOCK_R" is undefined
-    GPIO_PORTF_LOCK_R = 0x4C4F434B;   // 2) unlock PortF PF0  
-SpaceInvaders.c(102): error:  #20: identifier "GPIO_PORTF_CR_R" is undefined
-    GPIO_PORTF_CR_R = 0x1F;           // allow changes to PF4-0       
-SpaceInvaders.c(103): error:  #20: identifier "GPIO_PORTF_AMSEL_R" is undefined
-    GPIO_PORTF_AMSEL_R = 0x00;        // 3) disable analog function
-SpaceInvaders.c(104): error:  #20: identifier "GPIO_PORTF_PCTL_R" is undefined
-    GPIO_PORTF_PCTL_R = 0x00000000;   // 4) GPIO clear bit PCTL  
-SpaceInvaders.c(105): error:  #20: identifier "GPIO_PORTF_DIR_R" is undefined
-    GPIO_PORTF_DIR_R = 0x0E;          // 5) PF4,PF0 input, PF3,PF2,PF1 output   
-SpaceInvaders.c(106): error:  #20: identifier "GPIO_PORTF_AFSEL_R" is undefined
-    GPIO_PORTF_AFSEL_R = 0x00;        // 6) no alternate function
-SpaceInvaders.c(107): error:  #20: identifier "GPIO_PORTF_PUR_R" is undefined
-    GPIO_PORTF_PUR_R = 0x11;          // enable pullup resistors on PF4,PF0       
-SpaceInvaders.c(108): error:  #20: identifier "GPIO_PORTF_DEN_R" is undefined
-    GPIO_PORTF_DEN_R = 0x1F;          // 7) enable digital pins PF4-PF0         
-SpaceInvaders.c(115): warning:  #223-D: function "TExaS_Init" declared implicitly
-      TExaS_Init(SSI0_Real_Nokia5110_Scope);  // set system clock to 80 MHz
-SpaceInvaders.c(115): error:  #20: identifier "SSI0_Real_Nokia5110_Scope" is undefined
-      TExaS_Init(SSI0_Real_Nokia5110_Scope);  // set system clock to 80 MHz
-SpaceInvaders.c(116): warning:  #223-D: function "Random_Init" declared implicitly
-      Random_Init(1);
-SpaceInvaders.c(126): warning:  #223-D: function "rand" declared implicitly
-                if(v1 > 48) x ++,r1 = rand ()%14, v1 = 0;  // for new random number and restart
-SpaceInvaders.c(229): error:  #20: identifier "GPIO_PORTF_RIS_R" is undefined
-        if ( GPIO_PORTF_RIS_R & (1 <<4) ){
-SpaceInvaders.c(230): error:  #20: identifier "GPIO_PORTF_ICR_R" is undefined
-                GPIO_PORTF_ICR_R = 0x10;
-SpaceInvaders.c(235): error:  #20: identifier "GPIO_PORTF_ICR_R" is undefined
-                GPIO_PORTF_ICR_R = 0x01;
-SpaceInvaders.c(239): error:  #20: identifier "GPIO_PORTF_DATA_R" is undefined
-        GPIO_PORTF_DATA_R = count_;
-SpaceInvaders.c: 3 warnings, 28 errors
-".\SpaceInvaders.axf" - 28 Error(s), 3 Warning(s).
-Target not created
