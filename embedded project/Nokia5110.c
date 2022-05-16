@@ -400,4 +400,3 @@ void Nokia5110_ClearBuffer(void){int i;
 void Nokia5110_DisplayBuffer(void){
   Nokia5110_DrawFullImage(Screen);
 }
-
