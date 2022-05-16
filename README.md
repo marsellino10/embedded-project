@@ -12,8 +12,7 @@
 Embedded Test Lab Final Project
     <br />
     <a href="https://github.com/marsellino10/embedded-project/tree/main/embedded%20project"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+.
     <a href="////">Watch YouTube Demo</a>
   </p>
 </div>
