@@ -1192,3 +1192,4 @@ void Sound_Fastinvader4(void){
 void Sound_Highpitch(void){
   Sound_Play(highpitch,1802);
 }
+
