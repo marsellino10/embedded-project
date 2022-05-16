@@ -2,7 +2,6 @@
 #define	INTERRUPT_CONFIG_H
 
 #include "..//tm4c123gh6pm.h"
-#include "Nokia5110.h"
 #include "Random.h"
 #include "TExaS.h"
 #include <stdlib.h>
