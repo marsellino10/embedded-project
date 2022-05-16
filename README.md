@@ -78,6 +78,6 @@ Use this space to list resources you find helpful and would like to give credit 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/badge/contributors-6-blue
 [contributors-url]: https://github.com/marsellino10/embedded-project/graphs/contributors
 [product-screenshot]: ////////////////
