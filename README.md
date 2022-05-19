@@ -17,8 +17,8 @@ Embedded Test Lab Final Project
   </p>
 </div>
 
-<details>
-  Table of Contents
+
+  **Table of Contents
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -34,7 +34,7 @@ Embedded Test Lab Final Project
     </li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
+
 
 
 
