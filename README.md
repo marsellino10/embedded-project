@@ -1,24 +1,19 @@
 <div id="top"></div>
-<!-- PROJECT SHIELDS -->
-
 [![Contributors][contributors-shield]][contributors-url]
-
 <br />
 <div align="center">
-
   <h3 align="center">Single Player Car Race Game</h3>
-
   <p align="center">
-Embedded Test Lab Final Project
-    <br />
+    Embedded Test Lab Final Project
+<br />
     <a href="https://github.com/marsellino10/embedded-project/tree/main/embedded%20project"><strong>Explore the docs »</strong></a>
-.
+    ..
     <a href="////">Watch YouTube Demo</a>
   </p>
 </div>
 
 
-  **Table of Contents
+ ## Table of Contents
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -34,9 +29,6 @@ Embedded Test Lab Final Project
     </li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-
-
-
 
 ## About The Project
 
@@ -79,4 +71,4 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [contributors-shield]: https://img.shields.io/badge/contributors-6-blue
 [contributors-url]: https://github.com/marsellino10/embedded-project/graphs/contributors
-[product-screenshot]: ////////////////
+[product-screenshot]: https://drive.google.com/file/d/1Xm4gXUqAztLziwfKJ4kj3JZrBejv7R4Y/view?usp=sharing
