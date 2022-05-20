@@ -30,7 +30,7 @@
 
 ### About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+![Product Name Screen Shot](https://github.com/marsellino10/embedded-project/blob/main/Screen%20Shot%202022-05-20%20at%201.52.18%20AM.png)
 
 This is a Car Race game played by a single player using Keil, C programming language and implemented on hardware components (most importantly TivaC kit & Nokia 5110 ADC). The player moves in a direction where it is opposed by enemy cars. The player car should avoid hitting any of them. There are 3 lives granted to the player, should the car hit any of the opponent cars the player loses 1 life out of the 3. After 3 hits, the LCD screens "Game Over" along with the final score. 
 The player car's position is controlled through the ADC slider.
@@ -61,4 +61,3 @@ This is a space where we list resources we found helpful and would like to give 
 
 [contributors-shield]: (https://img.shields.io/badge/contributors-6-blue)
 [contributors-url]: (https://github.com/marsellino10/embedded-project/graphs/contributors)
-[product-screenshot]: (https://github.com/marsellino10/embedded-project/blob/main/Screen%20Shot%202022-05-20%20at%201.52.18%20AM.png)
