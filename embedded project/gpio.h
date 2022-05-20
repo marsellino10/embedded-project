@@ -5,7 +5,6 @@
 #include "Random.h"
 #include <stdlib.h>
 #include <time.h>
-#include "inter.h"
 #include "Nokia5110.h"	
 
 /* section: functions declarations */
