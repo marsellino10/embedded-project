@@ -1,8 +1,3 @@
-
-<div id="top"></div>
-[![Contributors][contributors-shield]][contributors-url]
-
-<br />
 <div align="center">
   <h3 align="center">Single Player Car Race Game</h3>
   <p align="center">
@@ -13,6 +8,15 @@
     <a href="https://www.youtube.com/watch?v=ZlvuRH89MgA&ab_channel=ClaraRaef">Watch YouTube Demo</a>
   </p>
 </div>
+
+### Team Members
+- [Arsanious Isaac Helmy](https://github.com/arsanious-isaac)
+- [Clara Raef Nasry](https://github.com/Clara-Raef)
+- [Mark Magdy Amin](https://github.com/markmagdy822000)
+- [Marsellino Medhat Zaki](https://github.com/marsellino10)
+- [Mina Nagy Latif](https://github.com/MinaNagyLatif)
+- [Youssef Nazeer Tawfik](https://github.com/Yousef-nazeer)
+
 
 
 ## Table of Contents
