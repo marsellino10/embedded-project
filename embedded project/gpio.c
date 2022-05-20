@@ -4,18 +4,6 @@
 
 void EdgeCounter_Init(void){                          
   SYSCTL_RCGC2_R |= 0x00000020; // (a) activate clock for port F
-  GPIO_PORTF_DIR_R &= ~0x10;    // (c) make PF4 in (built-in button)
-  GPIO_PORTF_AFSEL_R &= ~0x10;  //     disable alt funct on PF4
-  GPIO_PORTF_DEN_R |= 0x10;     //     enable digital I/O on PF4   
-  GPIO_PORTF_PCTL_R &= ~0x000F0000; // configure PF4 as GPIO
-  GPIO_PORTF_AMSEL_R = 0;       //     disable analog functionality on PF4
-  GPIO_PORTF_PUR_R |= 0x10;     //     enable weak pull-up on PF4
-  GPIO_PORTF_IS_R &= ~0x10;     // (d) PF4 is edge-sensitive
-  GPIO_PORTF_IBE_R &= ~0x10;    //     PF4 is not both edges
-  GPIO_PORTF_IEV_R &= ~0x10;    //     PF4 falling edge event
-  GPIO_PORTF_ICR_R = 0x10;      // (e) clear flag4
-  GPIO_PORTF_IM_R |= 0x10;      // (f) arm interrupt on PF4
-	
 	GPIO_PORTF_DIR_R &= ~0x01;    // (c) make PF0 in (built-in button)
   GPIO_PORTF_AFSEL_R &= ~0x01;  //     disable alt funct on PF0
   GPIO_PORTF_DEN_R |= 0x01;     //     enable digital I/O on PF0   
@@ -33,6 +21,21 @@ void EdgeCounter_Init(void){
   EnableInterrupts();           // (i) Clears the I bit
 }
 
+void PortE_Init(void){ 
+	volatile unsigned long delay;
+  SYSCTL_RCGC2_R |= 0x00000010;     // 1) F clock
+  delay = SYSCTL_RCGC2_R;           // delay   
+  GPIO_PORTE_LOCK_R = 0x4C4F434B;   // 2) unlock PortE
+  GPIO_PORTE_CR_R = 0x1E;           // allow changes to PE4-0     
+  GPIO_PORTE_AMSEL_R = 0x00;        // 3) disable analog function
+  GPIO_PORTE_PCTL_R = 0x00000000;   // 4) GPIO clear bit PCTL  
+  GPIO_PORTE_DIR_R = 0x02;          // 5) PE0 input, PE1 output   
+  GPIO_PORTE_AFSEL_R = 0x00;        // 6) no alternate function
+  GPIO_PORTE_PDR_R= 0x01;          // enable pulldown resistors on PE0       
+  GPIO_PORTE_DEN_R = 0xFF;  
+	GPIO_PORTE_PUR_R = 0x00;          // enable pullup resistors on PE1,PE0       
+
+}
 void PortF_Init(void){ volatile unsigned long delay;
   SYSCTL_RCGC2_R |= 0x00000020;     // 1) F clock
   delay = SYSCTL_RCGC2_R;           // delay   
@@ -45,6 +48,7 @@ void PortF_Init(void){ volatile unsigned long delay;
   GPIO_PORTF_PUR_R = 0x11;          // enable pullup resistors on PF4,PF0       
   GPIO_PORTF_DEN_R = 0x1F;          // 7) enable digital pins PF4-PF0         
 }
+
 
 // You can use this timer only if you learn how it works
 void Timer2_Init(unsigned long period){ 
@@ -75,7 +79,7 @@ void Delay100ms(unsigned long count){unsigned long volatile time;
   while(count>0){
     time = 227240;  // 0.1sec at 80 MHz
     while(time){
-	  	time--;
+				time--;
     }
     count--;
   }
@@ -87,29 +91,21 @@ void ADC_Init(void){
 	SYSCTL_RCGCGPIO_R|= (1<<4)
 												|(1<<5);
 	delay=SYSCTL_RCGCGPIO_R;
-	
 	GPIO_PORTE_AFSEL_R |=(1<<2);
-
 	GPIO_PORTE_DEN_R &= ~(1<<2);
-	
 	GPIO_PORTE_AMSEL_R |= (1<<2);
-	
 	ADC0_ACTSS_R &= ~(1<<3);
-	
 	ADC0_EMUX_R = (0XF<<12);
-	
-	
 	ADC0_SSMUX3_R = 1;
-	
 	ADC0_SSCTL3_R |=(1<<1)
 								|(1<<2);
-		
 	ADC0_IM_R |=(1<<2);
-	
 	ADC0_RIS_R |=(1<<3);
-	
  	ADC0_ACTSS_R |= (1<<3);	
-
   NVIC_EN2_R |= (1<<3);
-	
 }
+
+
+
+
+
