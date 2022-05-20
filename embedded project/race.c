@@ -42,7 +42,6 @@ void Enemies(int h, int v1,int v2, int r1, int r2, int lives){
 		Nokia5110_PrintBMP(64, 20, border, 0); 
 		Nokia5110_PrintBMP(64,40 , border, 0); 
 		Nokia5110_DisplayBuffer();     // draw buffer
-					ADC0_PSSI_R=(1<<3);
 
 
 }
