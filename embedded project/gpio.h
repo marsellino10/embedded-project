@@ -1,7 +1,7 @@
 #ifndef GPIO_H
 #define	GPIO_H
 
-#include "..//tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 #include "Random.h"
 #include <stdlib.h>
 #include <time.h>
